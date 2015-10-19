@@ -101,9 +101,10 @@ int stat_item_get_next(const struct stat_item *item, int32_t *idx, int32_t *valu
 /*! \brief Get the last (freshest) value */
 static int32_t stat_item_get_last(const struct stat_item *item);
 
-/*! \brief Skip all values and update idx accordingly */
+/*! \brief Skip all values of the item and update idx accordingly */
 int stat_item_discard(const struct stat_item *item, int32_t *idx);
 
+/*! \brief Skip all values of all items and update idx accordingly */
 int stat_item_discard_all(int32_t *idx);
 
 static inline int32_t stat_item_get_last(const struct stat_item *item)
